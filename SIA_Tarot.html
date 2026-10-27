@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101025"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>시아 타로 | SIA Tarot</title>
+<style>
+:root{--gold:#e9c98b;--cream:#f8efd9;--muted:#b8aec8;--panel:#211b37;--border:#76628a}*{box-sizing:border-box}body{margin:0;background:#101025;color:var(--cream);font-family:system-ui,-apple-system,'Noto Sans KR',sans-serif;min-height:100vh}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 0,#44325a77,transparent 64%),radial-gradient(ellipse at bottom right,#29315b77,transparent 50%)}main{position:relative;max-width:1120px;margin:auto;padding:50px 20px 80px}.eyebrow{text-align:center;color:var(--gold);font-size:.8rem;letter-spacing:.32em}h1{font-size:clamp(2.4rem,7vw,4.3rem);text-align:center;font-family:Georgia,serif;font-weight:500;letter-spacing:.06em;margin:18px 0 6px}.lead{text-align:center;color:var(--muted);line-height:1.8;margin:0 auto 28px}.line{width:110px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:25px auto}.controls{display:flex;align-items:center;flex-wrap:wrap;gap:18px;justify-content:center}.group{display:flex;gap:7px;padding:5px;background:#ffffff0d;border:1px solid #ffffff1e;border-radius:100px}.group button{border:0;border-radius:100px;background:transparent;color:var(--muted);font-size:.94rem;padding:10px 18px;cursor:pointer}.group button.active{background:#e7c98c;color:#29213b;font-weight:750}.status{text-align:center;color:var(--gold);min-height:25px;margin:24px 0 10px}.deck{display:flex;justify-content:center;align-items:flex-start;gap:clamp(6px,1.6vw,20px);flex-wrap:wrap;max-width:950px;margin:20px auto 0}.pick{width:clamp(76px,15vw,134px);aspect-ratio:2/3.5;border:0;padding:0;background:transparent;cursor:pointer;-webkit-perspective:1000px;perspective:1000px;transition:transform .2s}.pick:hover:not(:disabled){transform:translateY(-13px)}.pick:disabled{cursor:default}.card-inner{display:block;width:100%;height:100%;position:relative;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}.pick.flipped .card-inner{-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}.face{position:absolute;inset:0;border-radius:8px;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;border:2px solid #ddbb76;box-shadow:0 10px 30px #0008}.back{display:grid;place-items:center;background:repeating-linear-gradient(45deg,#25203f,#25203f 8px,#342a53 8px,#342a53 16px);padding:8px}.back:before{content:"";position:absolute;inset:7px;border:1px solid #cbb27b;border-radius:5px}.sigil{width:72%;aspect-ratio:1;border:1px solid #e5c985;border-radius:50%;display:grid;place-items:center;font-size:clamp(25px,5vw,46px);color:#f0d799;background:#231e3f}.front{-webkit-transform:rotateY(180deg);transform:rotateY(180deg);background:#d8c294}.front img{height:100%;width:100%;object-fit:cover}.image-fallback{display:none;width:100%;height:100%;color:#e4cf9d;background:linear-gradient(160deg,#3d355e,#21172b);align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:10px;text-align:center}.image-fallback span{font-size:38px}.image-fallback small{font-size:11px}.pick.reversed .front img,.pick.reversed .front .image-fallback{transform:rotate(180deg)}.actions{text-align:center;margin:23px 0}.primary,.secondary{border:1px solid var(--gold);color:#22192e;background:var(--gold);border-radius:100px;padding:13px 30px;font-size:1rem;font-weight:700;cursor:pointer}.secondary{color:var(--gold);background:transparent;margin-left:10px}button:focus-visible{outline:3px solid #fff;outline-offset:4px}.reading{margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.reading article{background:#ffffff0d;border:1px solid #bb9f7a55;border-radius:16px;padding:22px;min-width:0;animation:appear .5s ease both}.reading h2{color:var(--gold);font-family:Georgia,serif;font-size:1.4rem;margin:7px 0}.reading .position{font-size:.77rem;color:#c5addc;letter-spacing:.16em}.reading .orientation{color:#c4bacf;font-size:.85rem}.reading p{line-height:1.8;color:#e2d9e8;margin:18px 0 4px}.reading .keyword{color:#d9bd84;font-size:.86rem}.summary{border-top:1px solid #ffffff22;margin-top:30px;padding:24px 10px;text-align:center;line-height:1.9;color:#e7d9e9;display:none}.summary strong{color:var(--gold)}footer{position:relative;margin-top:62px;text-align:center;color:#aa9cb7;font-size:.8rem;line-height:1.9}footer a{color:#e4c890}.hidden{display:none!important}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@media(max-width:550px){main{padding:33px 12px 50px}.group button{padding:9px 12px;font-size:.84rem}.controls{gap:12px}.deck{gap:8px}.reading{grid-template-columns:1fr}.secondary{margin-top:10px;margin-left:0}.pick{width:clamp(72px,27vw,115px)}}@media(prefers-reduced-motion:reduce){.card-inner,.pick{transition:none}}
+
+/* 더 자세한 해석 */
+.reading article{padding:25px}.reading .meaning-intro{color:#f5e7cc;font-weight:600;margin:12px 0}.reading .section-heading{color:var(--gold);font-weight:700;font-size:.91rem;margin:19px 0 7px}.reading .reading-body{line-height:1.92;color:#e3dae9;margin:0}.reading .practical{background:#ffffff0b;border-left:3px solid #d7b87d;border-radius:4px;padding:10px 12px}.summary{text-align:left;max-width:800px;margin:30px auto 0;padding:26px;background:#ffffff0a;border:1px solid #bb9f7a55;border-radius:16px}.summary p{line-height:1.9}.summary-title{color:var(--gold);margin:0 0 5px;font-size:1.45rem}.summary-subtitle{color:#c5addc;font-size:.88rem;margin-bottom:18px}.summary-heading{color:var(--gold);font-size:1.07rem;margin:24px 0 6px}.summary-paragraph{margin:8px 0 13px}
+</style></head><body><main><div class="eyebrow">✦ THE MYSTIC TAROT ✦</div><h1>☾ 시아 타로 ☽</h1><p class="lead">당신의 마음에 질문을 품고 카드를 선택하세요.<br>우연히 만난 카드 속에서 오늘의 힌트를 발견해 보세요.</p><div class="line"></div>
+<div class="controls"><div class="group" aria-label="운세 종류"><button data-topic="general" class="active">종합운</button><button data-topic="love">연애운</button><button data-topic="money">금전운</button><button data-topic="work">일·진로</button></div><div class="group" aria-label="뽑기 방식"><button data-count="1" class="active">1장 뽑기</button><button data-count="3">3장 뽑기</button></div></div>
+<p class="status" id="status" role="status" aria-live="polite">마음에 드는 카드 한 장을 선택하세요</p><section class="deck" id="deck" aria-label="타로카드 고르기"></section><div class="actions"><button class="primary" id="shuffle">✦ 카드 다시 섞기</button><button class="secondary hidden" id="restart">처음부터 다시</button></div><section id="reading" class="reading" aria-live="polite"></section><section class="summary" id="summary"></section></main>
+<script>
+'use strict';
+const major=[
+['바보','새로운 출발','완벽하지 않아도 시작할 수 있습니다. 열린 마음으로 다음 가능성을 탐색해 보세요.','준비 부족이나 무모한 선택은 없는지 확인하고 한 번 더 살펴보세요.'],
+['마법사','능력과 실행','이미 가진 기술과 자원을 연결할 때입니다. 작은 실천이 변화를 시작합니다.','의지만 앞세우지 말고 현실적인 계획과 실행력을 점검하세요.'],
+['여사제','직관과 비밀','드러난 사실뿐 아니라 자신의 감정과 직관을 함께 살펴보세요.','추측에 의존하거나 중요한 정보를 놓치고 있지는 않은지 돌아보세요.'],
+['여황제','풍요와 돌봄','관계와 아이디어에 정성을 쏟으면 조금씩 성장할 수 있습니다.','타인에게 지나치게 맞추며 자신의 필요를 외면하지 마세요.'],
+['황제','질서와 책임','원칙을 세우고 차근차근 실행하면 안정감을 얻을 수 있습니다.','통제하려는 마음이 강해지고 있지 않은지 유연함을 되찾아 보세요.'],
+['교황','전통과 조언','경험이 있는 사람의 조언이나 검증된 방식이 도움이 될 수 있습니다.','남들의 기준보다 자신에게 맞는 원칙이 무엇인지 살펴보세요.'],
+['연인','선택과 조화','중요한 관계나 선택에서 자신의 가치관을 분명히 하세요.','마음과 행동이 어긋나는 부분을 솔직히 바라볼 필요가 있습니다.'],
+['전차','추진력과 방향','목표를 분명히 하고 꾸준히 나아갈 수 있는 힘이 있습니다.','속도보다 방향이 중요합니다. 지나친 경쟁심을 조심하세요.'],
+['힘','인내와 용기','다정함과 끈기가 당장의 어려움을 헤쳐 나가는 데 도움이 됩니다.','억누른 감정과 지친 마음을 인정하고 회복할 시간을 주세요.'],
+['은둔자','성찰과 탐색','잠시 주변 소음을 줄이고 자신이 진짜 원하는 방향을 탐색하세요.','혼자 고민하는 시간이 너무 길어졌다면 믿을 만한 사람과 이야기해 보세요.'],
+['운명의 수레바퀴','변화와 순환','상황은 계속 변합니다. 기회에 대응할 수 있도록 유연하게 준비하세요.','뜻대로 되지 않는 변화 앞에서 통제 가능한 일부터 정리하세요.'],
+['정의','균형과 책임','사실과 감정을 분리해 공정하고 책임 있는 결정을 내려보세요.','정보가 불충분하거나 판단이 치우치지 않았는지 점검해 보세요.'],
+['매달린 사람','관점 전환','서두르기보다 다른 각도에서 상황을 바라볼 때 새로운 길이 보입니다.','불필요하게 희생하거나 결정을 미루고 있지 않은지 확인하세요.'],
+['죽음','끝과 전환','익숙한 것을 정리해야 새로운 흐름이 들어올 수 있습니다.','이미 끝난 방식에 매달리기보다 작은 변화부터 받아들여 보세요.'],
+['절제','조율과 치유','극단을 피하고 서로 다른 요소들을 차분하게 조율해 보세요.','생활의 균형이 무너졌다면 속도를 늦추고 리듬을 되찾으세요.'],
+['악마','집착과 유혹','습관이나 의존이 나의 선택을 제한하고 있는지 살펴보세요.','당장의 불편함을 피하려는 마음이 문제를 길게 만들 수 있습니다.'],
+['탑','예상 밖의 변화','흔들리는 구조를 다시 점검하고 더 단단한 기반을 세울 때입니다.','필요한 변화를 외면하기보다 안전한 대안을 마련해 보세요.'],
+['별','희망과 회복','작지만 분명한 희망을 붙잡고 긴 호흡으로 회복을 이어가세요.','기대만으로 해결되지는 않습니다. 희망을 작은 행동으로 이어가세요.'],
+['달','불확실성과 감정','모든 것이 선명하지는 않습니다. 충분히 확인한 뒤 판단하세요.','걱정이나 오해가 사실처럼 느껴지지 않는지 구분해 보세요.'],
+['태양','활력과 기쁨','좋은 에너지를 나누고 자신 있게 장점을 펼쳐 보세요.','긍정적인 기대 속에서도 세부 사항을 놓치지 마세요.'],
+['심판','성찰과 새 출발','지나온 경험을 바탕으로 자신에게 의미 있는 결론을 내릴 때입니다.','과거에 대한 후회가 현재의 결정을 붙잡지 않도록 하세요.'],
+['세계','완성과 확장','한 단계를 마무리하고 지금까지의 성장을 인정해 보세요.','마지막 정리가 필요할 수 있습니다. 끝까지 세심하게 챙기세요.']
+];
+const suits=[['지팡이','wa','열정과 행동','🔥'],['컵','cu','감정과 관계','💧'],['검','sw','생각과 선택','⚔️'],['펜타클','pe','현실과 자원','✦']];
+const nums=['에이스','2','3','4','5','6','7','8','9','10','시종','기사','여왕','왕'];
+const patterns=[['새로운 가능성','작은 시작을 실천으로 옮겨 보세요.','성급한 출발을 경계하고 기초를 다져 보세요.'],['균형과 선택','서로 다른 요구 사이에서 우선순위를 찾아보세요.','결정을 미루거나 한쪽에 치우치지 않았는지 점검하세요.'],['협력과 확장','혼자보다 함께할 때 더 많은 것을 배울 수 있습니다.','계획과 협업에 빈틈이 없는지 확인하세요.'],['안정과 휴식','성과를 지키면서 필요한 휴식도 누려 보세요.','안주하거나 지나치게 움켜쥐고 있지는 않은지 돌아보세요.'],['갈등과 조정','의견 차이 속에서도 배울 점을 찾아보세요.','불필요한 경쟁과 소모적인 다툼을 줄이세요.'],['회복과 나눔','주고받는 도움과 성취를 기쁘게 받아들이세요.','인정받고 싶은 마음이 판단을 흔들지는 않는지 살펴보세요.'],['도전과 방어','중요한 가치를 지키되 유연성을 잃지 마세요.','지나친 방어심이나 피로감에 주의하세요.'],['속도와 진전','기회가 생기면 준비한 것을 차근차근 실행하세요.','급한 결정보다 사실 확인을 먼저 하세요.'],['인내와 성숙','지금까지 쌓아온 힘을 믿고 한 걸음 더 나아가세요.','걱정을 혼자 짊어지지 말고 필요한 도움을 구하세요.'],['마무리와 책임','끝맺음과 책임 분담을 분명하게 해 보세요.','지나친 부담은 덜어내고 우선순위를 재정리하세요.'],['호기심과 소식','새로운 소식이나 배움의 기회를 열린 마음으로 받아들이세요.','설렘만으로 판단하지 말고 내용을 확인하세요.'],['도전과 움직임','목표를 향해 에너지를 실어 나아갈 때입니다.','성급하거나 충동적인 행동을 점검하세요.'],['돌봄과 자신감','자신의 강점을 따뜻하고 성숙하게 발휘해 보세요.','타인을 챙기느라 자신의 필요를 잊지 마세요.'],['책임과 리더십','넓게 보고 책임감 있게 방향을 이끌어 보세요.','권위와 고집 대신 대화와 균형을 선택하세요.']];
+const cards=major.map((m,i)=>({name:m[0],code:'ar'+String(i).padStart(2,'0'),key:m[1],up:m[2],down:m[3],symbol:'☀'}));
+suits.forEach(([name,prefix,domain,symbol])=>nums.forEach((n,i)=>{const p=patterns[i]; const code=prefix+(i===0?'ac':i<=9?String(i+1).padStart(2,'0'):['pa','kn','qu','ki'][i-10]);cards.push({name:name+' '+n,code,key:domain+' · '+p[0],up:domain+'의 흐름이 강조됩니다. '+p[1],down:domain+'의 흐름을 다시 살펴보세요. '+p[2],symbol});}));
+const base='https://raw.githubusercontent.com/seven102161/elaine-tarot-cards/main/cards/';
+let topic='general',count=1,selected=[],drawPool=[],deckChoices=[],readingEpoch=0;const $=s=>document.querySelector(s);const shuffleArray=a=>{for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const labels={general:'종합운',love:'연애운',money:'금전운',work:'일·진로'};const positions=['과거 · 지나온 영향','현재 · 지금의 상황','미래 · 앞으로의 방향'];
+function reset(){readingEpoch++;selected=[];drawPool=shuffleArray(cards.map((_,i)=>i));deckChoices=drawPool.slice(0,count===1?7:9);$('#deck').innerHTML='';$('#reading').innerHTML='';$('#summary').style.display='none';$('#summary').textContent='';$('#restart').classList.add('hidden');$('#shuffle').classList.remove('hidden');$('#status').textContent=count===1?'마음에 드는 카드 한 장을 선택하세요':'카드 3장을 순서대로 골라주세요 · 첫 번째는 과거';deckChoices.forEach((idx,i)=>{const b=document.createElement('button');b.className='pick';b.type='button';b.setAttribute('aria-label',`뒷면 카드 ${i+1} 선택`);b.innerHTML='<span class="card-inner"><span class="face back"><span class="sigil">☾</span></span><span class="face front"></span></span>';b.onclick=()=>pick(b,idx);$('#deck').appendChild(b)});}
+function scrollToReading(){
+ if(!window.matchMedia || !window.matchMedia('(max-width: 767px)').matches)return;
+ var message=$('#reading').firstElementChild;
+ if(!message)return;
+ var top=message.getBoundingClientRect().top+(window.pageYOffset||document.documentElement.scrollTop||0)-16;
+ var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ try{window.scrollTo({top:Math.max(0,top),behavior:reduce?'auto':'smooth'});}catch(e){window.scrollTo(0,Math.max(0,top));}
+}
+function pick(btn,index){
+ if(btn.disabled||selected.length>=count)return;
+ const card=cards[index],reversed=Math.random()<.28,epoch=readingEpoch;
+ btn.disabled=true;btn.classList.add('flipped');if(reversed)btn.classList.add('reversed');
+ const face=btn.querySelector('.front'),img=document.createElement('img'),fallback=document.createElement('div');
+ fallback.className='image-fallback';fallback.innerHTML='<span>'+card.symbol+'</span><small>'+card.name+'</small>';
+ img.alt=card.name;img.onerror=()=>{img.style.display='none';fallback.style.display='flex'};
+ // Safari에서 파일로 연 HTML도 원격 카드 이미지 로딩에 실패하면 기본 카드로 대체됩니다.
+ img.src=base+card.code+'.jpg';face.appendChild(img);face.appendChild(fallback);
+ selected.push({card,reversed});const n=selected.length;
+ if(n===count){document.querySelectorAll('.pick:not(.flipped)').forEach(b=>{b.disabled=true;b.style.opacity='.24'});}
+ setTimeout(()=>{
+  if(epoch!==readingEpoch)return;
+  addReading(card,reversed,n);
+  if(n===count){
+   $('#status').textContent='✦ 카드가 전하는 메시지를 확인해 보세요 ✦';
+   $('#restart').classList.remove('hidden');$('#shuffle').classList.add('hidden');
+   showSummary();
+   // 세 장을 고르는 중에는 움직이지 않고, 마지막 카드가 열린 후 이동합니다.
+   requestAnimationFrame(()=>requestAnimationFrame(scrollToReading));
+  }else{$('#status').textContent=`${n}장 선택 완료 · ${n===1?'현재':'미래'} 카드를 골라주세요`;}
+ },550);
+}
+const majorScenes=[
+['새 일을 시작하거나 낯선 사람을 만나는 순간처럼, 아직 결과는 모르지만 설레는 출발점에 서 있는 모습이에요.','시작 전에 꼭 필요한 준비 한 가지만 정하고, 완벽해질 때까지 미루지는 마세요.'],
+['하고 싶은 일에 필요한 도구가 사실은 이미 손에 있는 상태예요.','지금 갖고 있는 시간·기술·도움 중 당장 쓸 수 있는 한 가지를 적고 실행해 보세요.'],
+['말보다 분위기나 직감에서 중요한 신호를 느끼는 상황에 가까워요.','느낌을 무시하지 않되, 확인 가능한 사실과 내 추측을 구분하세요.'],
+['정성을 들인 관계나 일이 서서히 자라는 장면을 떠올려 보세요.','상대와 자신을 함께 돌보는 방법을 한 가지 정해 보세요.'],
+['계획이 없어서 마음이 복잡할 때, 기준과 순서가 필요하다는 뜻이에요.','지켜야 할 원칙과 조정해도 되는 부분을 따로 적어 보세요.'],
+['혼자 고민하기보다 믿을 만한 선배나 익숙한 방식을 참고할 수 있어요.','조언을 듣고도 내 상황에 맞는지 한 번 더 판단하세요.'],
+['사람이나 기회 사이에서 내 마음이 진짜 원하는 것을 골라야 하는 장면이에요.','무엇이 좋아 보이는지가 아니라 무엇이 내 가치관에 맞는지 물어보세요.'],
+['하나의 목표에 집중하면 앞으로 나아갈 수 있지만 속도 조절도 필요해요.','가장 중요한 목표 하나를 고르고 오늘 할 일을 정하세요.'],
+['힘으로 밀어붙이지 않고 차분히 버티는 태도가 더 효과적인 때예요.','감정을 눌러 참기보다 부드럽고 분명하게 표현해 보세요.'],
+['사람들 의견에 흔들려서 혼자 생각할 시간이 필요한 상태일 수 있어요.','잠시 조용히 생각하되 혼자 해결할 필요까지는 없다는 걸 기억하세요.'],
+['예상하지 못한 일정 변화나 기회처럼 흐름이 바뀌는 시기예요.','변화 자체보다 내가 대응할 수 있는 선택에 집중해 보세요.'],
+['감정만으로 결론 내리기보다 서로의 입장과 사실을 살필 때예요.','결정에 필요한 근거를 적고 누구에게도 불공정하지 않은지 점검하세요.'],
+['당장 움직일수록 답답할 때, 관점을 바꾸면 해결의 실마리가 나올 수 있어요.','조급한 결정을 잠시 미루고 다른 사람이라면 어떻게 볼지 떠올려 보세요.'],
+['무언가가 실제로 끝나고 다른 단계로 넘어가는 전환점이에요. 실제 죽음을 뜻하지 않아요.','더 이상 유지할 필요가 없는 습관이나 기대를 하나 내려놓아 보세요.'],
+['일과 휴식, 내 마음과 상대의 입장 사이에서 적당한 균형을 찾는 과정이에요.','지금 가장 과한 부분 한 가지를 조금 줄여 보세요.'],
+['나도 모르게 반복하는 습관이나 끊기 어려운 관계에 주목하라는 뜻이에요.','불편하지만 계속 붙잡는 이유가 무엇인지 솔직히 확인하세요.'],
+['기존의 믿음이나 계획이 흔들릴 수 있지만, 꼭 나쁜 일만을 예고하는 카드는 아니에요.','변경할 수 없는 것과 새로 세울 수 있는 계획을 구분해 보세요.'],
+['상처나 지친 마음이 조금씩 회복되는 시간처럼, 작지만 다시 기대하게 돼요.','빨리 좋아져야 한다는 압박 없이 지금 가능한 한 걸음을 선택하세요.'],
+['정보가 부족하거나 마음이 불안해서 상황이 더 복잡해 보일 수 있어요.','확인되지 않은 소문이나 짐작을 사실처럼 받아들이지 마세요.'],
+['해낸 일을 인정받거나 일상의 좋은 순간을 분명하게 느끼는 그림이에요.','잘된 부분은 기쁘게 누리되 기본적인 확인을 잊지 마세요.'],
+['지난 일을 돌아보고 새로운 결정을 내려야 한다는 신호에 가까워요.','과거의 후회보다 지금 바꿀 수 있는 행동을 정하세요.'],
+['오래 진행한 일의 한 단계를 마무리하고 다음 목표를 떠올리는 시점이에요.','완료한 일을 정리하고 스스로 이룬 점을 구체적으로 인정하세요.']
+];
+const minorScenes={
+'지팡이':['새로운 도전의 불씨가 생김','두 갈래 진로와 앞으로의 계획','새로운 기회가 뻗어 나가길 기다림','사람들과 기쁜 성취를 나눔','서로 다른 의견과 경쟁','노력이 인정받고 자신감이 생김','내 자리와 의견을 지켜야 함','소식이나 일이 빠르게 움직임','여러 번 버텨 지쳤지만 끝을 앞둠','혼자 너무 많은 책임을 떠안음','흥미로운 제안이나 새 취미를 만남','열정적으로 뛰어들지만 서두름','활동적이고 자신감 있는 태도','큰 방향을 정하고 사람들을 이끔'],
+'컵':['새로운 호감이나 따뜻한 감정의 시작','서로의 마음이 맞는 관계','친구나 동료와 즐거움을 나눔','감정이 무뎌져 제안을 놓치기 쉬움','잃은 것에 마음이 머물러 있음','옛 추억과 익숙한 사람을 떠올림','여러 기대와 상상이 뒤섞임','익숙한 관계나 감정을 떠나려 함','바라던 만족을 가까이 느끼는 때','가족이나 가까운 사람들과의 조화','다정한 연락이나 호기심 어린 감정','마음을 표현하며 누군가에게 다가감','감정을 이해하고 부드럽게 돌봄','흔들리는 감정을 안정적으로 다룸'],
+'검':['새로운 생각이나 분명한 사실을 발견함','선택이 어려워 잠시 결정을 멈춤','말이나 상황 때문에 마음이 아픔','생각을 정리하며 휴식이 필요함','이기고 지는 논쟁에 지쳐 있음','더 나은 환경으로 조심스럽게 이동함','말하지 않은 의도나 숨겨진 정보','당장 벗어나기 어렵다는 생각에 갇힘','걱정이 커져 잠들기 어려운 마음','한 방식이 끝나고 회복을 준비함','궁금한 사실을 적극적으로 탐색함','빠르게 주장하고 행동하는 태도','명확한 경계와 솔직한 판단','이성적인 결단과 책임 있는 결정'],
+'펜타클':['작은 수입이나 현실적인 기회의 시작','돈·시간·일정을 동시에 조절함','실력을 보여 주며 함께 성과를 만듦','안전을 위해 돈이나 자원을 붙잡음','경제적·현실적 어려움으로 위축됨','주고받는 도움과 공정한 분배','성과가 나올 때까지 기다리며 점검함','기술을 반복해 익히고 실력을 키움','스스로 이룬 안정과 만족','오래가는 기반과 가족의 안정','실용적인 공부나 작은 제안','느려도 꾸준히 책임을 다함','생활을 꼼꼼히 돌보고 현실을 챙김','자원을 체계적으로 관리하고 안정시킴']};
+const topicGuidance={
+ general:['지금 하는 선택이 생활 전체에 어떤 영향을 주는지 살펴보세요.','이번 주에 바꾸고 싶은 습관 하나를 정해 보세요.'],
+ love:['연애에서는 상대방의 마음을 카드로 확정할 수 없어요. 대신 내가 원하는 관계와 실제 대화를 살펴보라는 의미로 읽어 보세요.','예를 들어 연락이 뜸하다면 관심이 없다고 단정하기 전에 서로의 상황과 기대를 직접 확인해 보세요.'],
+ money:['금전운은 돈이 반드시 들어오거나 나간다는 예언이 아니에요. 수입·지출·위험을 어떤 태도로 다룰지 생각해 보는 힌트예요.','예를 들어 큰 구매나 투자를 고민 중이라면 여유 자금, 조건, 손실 가능성을 먼저 적어 보세요.'],
+ work:['일과 진로에서는 내 역량, 팀과의 소통, 목표의 현실성을 함께 살펴보는 게 중요해요.','예를 들어 이직이나 새로운 일을 고민 중이라면 기대하는 점과 포기해야 할 점을 각각 적어 보세요.']};
+function elText(tag,cl,t){const e=document.createElement(tag);if(cl)e.className=cl;e.textContent=t;return e}
+function addReading(c,rev,n){
+ const article=document.createElement('article'),position=count===1?'오늘의 메시지':positions[n-1];
+ const i=cards.indexOf(c),isMajor=i<22,suit=isMajor?'':suits[Math.floor((i-22)/14)][0],rank=isMajor?-1:(i-22)%14;
+ const scene=isMajor?majorScenes[i][0]:minorScenes[suit][rank],step=isMajor?majorScenes[i][1]:patterns[rank][rev?2:1];
+ const orientation=rev?'역방향':'정방향',baseMeaning=rev?c.down:c.up;
+ article.append(elText('div','position',position),elText('h2','',c.name),elText('div','orientation',(rev?'↕ ':'↑ ')+orientation),elText('div','keyword','핵심 키워드 · '+c.key));
+ article.append(elText('div','section-heading','✦ 쉽게 말하면'),elText('p','reading-body meaning-intro',scene));
+ article.append(elText('div','section-heading','✦ 이 카드가 전하는 메시지'),elText('p','reading-body',baseMeaning));
+ if(rev)article.append(elText('p','reading-body','역방향은 반드시 나쁜 일이 생긴다는 뜻이 아니에요. '+(isMajor?'이 카드의 장점이 아직 충분히 드러나지 않았거나, 균형을 다시 잡아야 할 수 있다는 의미예요.':'지금 이 주제가 과하거나 부족한 부분은 없는지 천천히 점검하라는 뜻이에요.')));
+ const [context,example]=topicGuidance[topic];article.append(elText('div','section-heading','✦ '+labels[topic]+'에서는'),elText('p','reading-body',context+' '+(isMajor?'특히 '+c.key+'에 주목해 보세요.':suit+' 카드가 상징하는 '+suits.find(x=>x[0]===suit)[2]+'의 관점에서 살펴보세요.')));
+ article.append(elText('div','section-heading','✦ 생활 속 예시'),elText('p','reading-body practical',example));
+ article.append(elText('div','section-heading','✦ 지금 해보면 좋은 행동'),elText('p','reading-body',step));
+ if(count===3)article.append(elText('p','reading-body',n===1?'과거 위치: 이미 겪었던 상황이나 지금까지 영향을 주는 경험과 연결해 보세요.':n===2?'현재 위치: 지금 가장 크게 느끼는 감정이나 문제를 이해하는 힌트로 보세요.':'미래 위치: 확정된 결과가 아닌, 지금의 선택을 이어 갔을 때 생각해 볼 방향이에요.'));
+ $('#reading').appendChild(article)
+}
+// 78장의 카드 중 어떤 세 장을 고르더라도 서로 다른 흐름으로 읽어 주는 조합형 해석.
+const narrativeTopics={
+ general:{title:'생활 전반의 흐름',intro:'세 장을 합쳐 보면 과거에 형성된 생활의 방식이 현재의 판단에 어떤 영향을 주고, 앞으로 무엇을 조정하면 좋을지 읽을 수 있어요.',focus:{'불':'지금은 생각을 실제 행동으로 바꾸는 추진력이 이야기의 중심이에요. 다만 일정과 체력을 함께 고려해야 오래갈 수 있어요.','물':'감정과 관계의 변화가 생활 전체의 만족도에 영향을 주는 흐름이에요. 마음을 돌보면서 현실적인 일상도 챙겨 보세요.','공기':'정보와 판단, 대화가 중요한 연결고리예요. 확실한 사실과 나의 걱정을 구분할수록 선택이 쉬워질 수 있어요.','땅':'돈·시간·건강한 생활 리듬처럼 눈에 보이는 기반을 어떻게 관리할지가 중요해요. 작은 습관을 꾸준히 이어가는 방식이 어울려요.'},action:'이번 주 가장 신경 쓰이는 문제 하나를 적고, 내가 바꿀 수 있는 행동을 한 가지 정해 보세요.'},
+ love:{title:'마음과 관계의 흐름',intro:'이 조합은 상대방의 속마음을 맞히는 결과가 아니라, 지나온 관계의 경험이 지금의 감정과 소통 방식에 어떤 영향을 주는지 살펴보는 이야기예요.',focus:{'불':'설렘과 적극적인 표현이 관계에 영향을 줄 수 있어요. 너무 서두르기보다 상대의 속도도 존중하는 게 중요해요.','물':'친밀감, 서운함, 공감 같은 감정이 중요한 주제로 나타나요. 원하는 것이 무엇인지 스스로 이해하고 말로 표현해 보세요.','공기':'연락, 오해, 말하지 못한 생각이 관계를 좌우하기 쉬운 흐름이에요. 추측보다는 직접적인 대화가 도움이 됩니다.','땅':'함께 보내는 시간과 꾸준한 행동이 애정을 확인하는 중요한 기준이에요. 말뿐인 약속보다 반복되는 행동을 살펴보세요.'},action:'상대에게 바라는 점 하나와 내가 먼저 표현할 수 있는 마음 하나를 정리해 보세요.'},
+ money:{title:'돈과 현실적인 선택의 흐름',intro:'세 장은 수입이나 당첨을 예언하지 않아요. 과거의 소비·저축 습관이 현재의 재정 판단에 어떤 영향을 주며, 다음에는 무엇을 점검해야 할지 살펴보는 도구예요.',focus:{'불':'새로운 수입 아이디어나 지출을 동반하는 시도가 떠오를 수 있어요. 기대 수익만 보지 말고 필요한 비용도 함께 계산해 보세요.','물':'감정에 따른 소비나 타인과의 금전적 약속을 돌아볼 시점이에요. 만족감과 실제 필요를 구분하면 도움이 돼요.','공기':'계약 조건, 비교, 계획 등 정보를 정확히 이해하는 일이 우선이에요. 불확실한 제안은 한 번 더 확인하세요.','땅':'예산과 저축, 생활비처럼 구체적인 숫자가 이야기의 중심이에요. 크고 빠른 변화보다 반복 가능한 관리가 중요해요.'},action:'최근 지출을 고정비·필수비·선택비로 나눠 보고, 부담 없이 조절할 항목 하나를 골라 보세요.'},
+ work:{title:'일과 진로의 흐름',intro:'과거의 경험과 익힌 기술이 현재의 업무 방식에 어떻게 이어지는지, 다음 단계에서 어떤 역량과 선택이 중요할지 살펴보는 해석이에요.',focus:{'불':'도전하고 실행하는 에너지가 강한 흐름이에요. 일의 속도를 높이기 전에 우선순위와 자원을 정해 두면 좋아요.','물':'동료와의 관계, 일에 대한 만족감, 동기부여가 중요한 주제예요. 성과만큼 소통과 회복도 챙겨 보세요.','공기':'문제 해결과 의견 조율, 정보 확인이 핵심이에요. 감정적인 충돌을 피하고 근거를 갖고 소통하면 좋아요.','땅':'실력의 축적, 보상, 업무 시스템 같은 현실적 기반이 강조돼요. 꾸준한 성과를 기록하면 다음 기회를 판단하기 수월해요.'},action:'현재 업무에서 개선할 점 하나를 정하고, 이번 주에 끝낼 수 있는 작고 구체적인 목표로 나눠 보세요.'}
+};
+const themeWords={
+ '새로운 출발':'새로운 시작','능력과 실행':'능력을 펼치는 일','직관과 비밀':'감춰진 마음과 정보','풍요와 돌봄':'돌봄과 성장','질서와 책임':'원칙과 책임','전통과 조언':'조언과 익숙한 방식','선택과 조화':'중요한 선택','추진력과 방향':'목표를 향한 추진력','인내와 용기':'참을성과 용기','성찰과 탐색':'혼자 생각하는 시간','변화와 순환':'예상 밖의 변화','균형과 책임':'공정한 판단','관점 전환':'다른 시각','끝과 전환':'낡은 방식의 마무리','조율과 치유':'균형의 회복','집착과 유혹':'놓기 어려운 습관','예상 밖의 변화':'흔들리는 계획','희망과 회복':'희망과 회복','불확실성과 감정':'막연한 불안','활력과 기쁨':'자신감과 기쁨','성찰과 새 출발':'지난 일의 재평가','완성과 확장':'한 단계의 완성'
+};
+function cardTheme(item){
+ const c=item.card,idx=cards.indexOf(c);
+ const text=idx<22?(themeWords[c.key]||c.key):minorScenes[suits[Math.floor((idx-22)/14)][0]][(idx-22)%14];
+ return item.reversed?text+'에 생긴 지연이나 부담':text;
+}
+function cardDomain(c){const idx=cards.indexOf(c);if(idx<22){const a=['불','공기','물','땅'];return a[[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21][idx]%4]}
+ return ['불','물','공기','땅'][Math.floor((idx-22)/14)];}
+function trendBridge(a,b){
+ if(a===b)return '앞뒤 카드가 비슷한 주제를 반복해서 강조해요. 이전부터 이어진 패턴을 조금 더 주의 깊게 살펴볼 필요가 있어요.';
+ const k=[a,b].sort().join('-');
+ const phrases={'공기-물':'머리로 이해한 것과 마음으로 느끼는 것 사이에 차이가 생길 수 있어요. 감정을 무시하지 않되 확인한 사실도 함께 보세요.','공기-불':'생각을 행동으로 옮기려는 변화가 보여요. 속도보다 실행할 근거와 순서를 갖추는 것이 중요해요.','공기-땅':'계획이나 고민을 실제 일정과 비용에 맞춰야 하는 흐름이에요. 구체적인 숫자와 기한이 도움이 돼요.','물-불':'마음이 움직이며 행동으로 이어지거나, 반대로 서두른 행동이 감정에 영향을 줄 수 있어요. 의도와 표현을 맞춰 보세요.','물-땅':'바라는 마음을 일상에서 지속 가능한 행동으로 바꾸는 게 관건이에요. 생활 속 작은 약속부터 지켜 보세요.','땅-불':'안정적인 기반과 새로운 시도 사이에서 조절이 필요해요. 무리하지 않는 범위에서 변화를 시도해 보세요.'};
+ return phrases[k]||'서로 다른 에너지가 만나는 조합이에요. 한 가지 방식만 고집하지 말고 상황에 맞게 조정해 보세요.';
+}
+function positionSentence(item,position){const name=item.card.name,theme=cardTheme(item),rev=item.reversed;
+ if(position===0)return `과거에 나온 「${name}」${rev?' 역방향':' 정방향'}은 ${theme}이(가) 이전 경험의 중심에 있었을 수 있음을 보여 줘요. ${rev?'당시에는 자신의 페이스를 잃거나 마음에 걸리는 일이 충분히 정리되지 않았을 수 있어요.':'그때의 선택과 경험이 지금까지 이어지는 기준이나 습관을 만들었을 수 있어요.'}`;
+ if(position===1)return `현재의 「${name}」${rev?' 역방향':' 정방향'}은 바로 지금 ${theme}을(를) 살펴보라고 말해요. ${rev?'생각만으로 해결하려 하거나 불안 때문에 행동을 미루고 있는 부분은 없는지 확인해 보세요.':'좋은 가능성이 있다면 막연히 기다리기보다 무엇을 할 수 있는지 하나씩 구체화해 보세요.'}`;
+ return `미래의 자리에 나온 「${name}」${rev?' 역방향':' 정방향'}은 앞으로 ${theme}이(가) 중요한 과제가 될 수 있다는 뜻으로 읽을 수 있어요. ${rev?'결과가 늦어지더라도 실패를 확정할 필요는 없어요. 준비 방식과 우선순위를 다시 조정할 여지가 있어요.':'지금의 경험을 바탕으로 필요한 선택을 이어 가면 그 방향을 더 잘 활용할 수 있어요.'}`;
+}
+function topicBridge(t,a,b,c){const d=[a,b,c].map(x=>cardDomain(x.card)),reversed=[a,b,c].filter(x=>x.reversed).length;
+ const shared=d.every(x=>x===d[0]);const shift=d[0]!==d[2];
+ const tlines={
+ general:shift?'처음과 마지막 카드의 성격이 다르기 때문에, 기존의 생활 방식에서 새로운 방향으로 옮겨 가는 이야기가 두드러져요.':'시작과 끝이 비슷한 성격이라 처음부터 중요했던 문제가 다른 모습으로 다시 나타날 수 있어요. 이번에는 같은 상황에서도 다른 선택을 해볼 수 있겠어요.',
+ love:shift?'관계에서 중요하게 여겼던 것과 앞으로 필요한 태도가 달라질 수 있어요. 과거 방식이 늘 정답이라고 생각하지 않아도 괜찮아요.':'처음부터 중요했던 감정이나 관계의 기준이 앞으로도 영향을 줄 수 있어요. 그 기준이 서로에게 편안한지 대화해 보세요.',
+ money:shift?'기존의 돈 관리 방식만 고집하기보다 달라진 상황에 맞춰 예산과 계획을 조정할 필요가 있어 보여요.':'예전부터 반복되는 소비나 관리 습관이 핵심일 수 있어요. 같은 선택이 어떤 결과를 낳았는지 실제 내역으로 확인해 보세요.',
+ work:shift?'이전의 업무 스타일에서 다른 역량이 요구되는 다음 단계로 옮겨 가는 흐름으로 읽을 수 있어요.':'과거에 쌓은 강점이 앞으로도 쓰일 가능성을 생각해 볼 수 있어요. 다만 익숙한 방식만 반복하고 있지는 않은지 점검해 보세요.'};
+ let extra=shared?' 세 장 모두 비슷한 에너지를 담고 있어서 이 주제를 특히 반복해서 돌아보라는 메시지로 읽을 수 있어요.':'';
+ if(reversed===3)extra+=' 세 장 모두 역방향이지만 불운을 뜻하지는 않아요. 외부 결과보다 마음과 계획을 정돈하는 일이 먼저일 수 있어요.';
+ else if(reversed===0)extra+=' 세 장 모두 정방향이라면 공통된 강점을 의식하며 행동을 이어 나가 보세요.';
+ else if(b.reversed)extra+=' 특히 현재 카드가 역방향이라 지금의 장애물을 먼저 정리하는 것이 다음 단계에 도움이 될 수 있어요.';
+ return tlines[t]+extra;
+}
+function addSummaryHeading(el,text){el.appendChild(elText('h3','summary-heading',text))}
+function addSummaryPara(el,text){el.appendChild(elText('p','summary-paragraph',text))}
+function showSummary(){
+ if(count!==3||selected.length!==3)return;
+ const el=$('#summary'),[past,now,future]=selected,config=narrativeTopics[topic];el.replaceChildren();
+ el.appendChild(elText('h2','summary-title','✦ 세 장의 카드가 전하는 이야기 ✦'));
+ el.appendChild(elText('div','summary-subtitle',labels[topic]+' · 과거 → 현재 → 미래'));
+ addSummaryPara(el,config.intro);
+ addSummaryHeading(el,'01 · 지금까지 이어진 이야기');
+ addSummaryPara(el,positionSentence(past,0)+' '+positionSentence(now,1));
+ addSummaryPara(el,trendBridge(cardDomain(past.card),cardDomain(now.card)));
+ addSummaryHeading(el,'02 · 현재의 선택이 미래에 미치는 영향');
+ addSummaryPara(el,`「${now.card.name}」에서 「${future.card.name}」으로 이어지는 흐름을 함께 보면, 현재의 ${cardTheme(now)}을(를) 어떻게 다루느냐에 따라 다음 장면에서 ${cardTheme(future)}이(가) 중요한 주제로 떠오를 수 있어요.`);
+ addSummaryPara(el,positionSentence(future,2)+' '+trendBridge(cardDomain(now.card),cardDomain(future.card)));
+ addSummaryHeading(el,'03 · 이 조합을 '+labels[topic]+'으로 해석한다면');
+ const frequency={};selected.forEach(x=>{const d=cardDomain(x.card);frequency[d]=(frequency[d]||0)+1});const primary=Object.keys(frequency).sort((a,b)=>frequency[b]-frequency[a])[0];
+ addSummaryPara(el,config.focus[primary]+' '+topicBridge(topic,past,now,future));
+ addSummaryHeading(el,'04 · 지금 할 수 있는 구체적인 행동');
+ addSummaryPara(el,config.action+' 특히 「'+now.card.name+'」의 메시지를 오늘 실천할 수 있는 작은 행동으로 바꾸고, 「'+future.card.name+'」은 앞으로 선택할 때 점검할 기준으로 삼아 보세요.');
+ addSummaryPara(el,'이 해석은 세 카드의 위치·정방향/역방향·성격을 함께 연결한 하나의 이야기예요. 미래가 정해졌다는 뜻이 아니며, 실제 상황과 맞는 부분만 참고해도 충분합니다.');
+ el.style.display='block';
+}
+document.querySelectorAll('[data-topic]').forEach(b=>b.onclick=()=>{topic=b.dataset.topic;document.querySelectorAll('[data-topic]').forEach(x=>x.classList.toggle('active',x===b));reset()});document.querySelectorAll('[data-count]').forEach(b=>b.onclick=()=>{count=Number(b.dataset.count);document.querySelectorAll('[data-count]').forEach(x=>x.classList.toggle('active',x===b));reset()});$('#shuffle').onclick=reset;$('#restart').onclick=reset;reset();
+</script></body></html>
